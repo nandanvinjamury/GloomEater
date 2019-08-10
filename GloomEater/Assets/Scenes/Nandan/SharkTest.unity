@@ -881,6 +881,7 @@ GameObject:
   - component: {fileID: 846799690}
   - component: {fileID: 846799692}
   - component: {fileID: 846799691}
+  - component: {fileID: 846799693}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -945,6 +946,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 846799689}
   m_CullTransparentMesh: 0
+--- !u!114 &846799693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 846799689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4bea1fcd77d86a44a31adf0365aaa66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gloomMeter: {fileID: 1801457446}
+  hasStarted: 0
 --- !u!1 &1027186059
 GameObject:
   m_ObjectHideFlags: 0
@@ -1431,7 +1446,7 @@ GameObject:
   - component: {fileID: 1801457447}
   - component: {fileID: 1801457446}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: gloombar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
