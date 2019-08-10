@@ -16,5 +16,7 @@ public class CameraFollower : MonoBehaviour
     void Update()
     {
         transform.position = player.transform.position + new Vector3(0, 4, -10);
+        transform.eulerAngles = player.transform.eulerAngles + new Vector3(20, 0, 0);
+        transform.LookAt(player.transform, Vector3.up);
     }
 }
