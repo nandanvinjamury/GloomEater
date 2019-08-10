@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
 
     public Vector3 sharkMovementInput;
     public Rigidbody sharkRB;
+    public float speed;
 
     // Start is called before the first frame update
     void Start()
@@ -23,9 +24,30 @@ public class PlayerController : MonoBehaviour
 
     public void movementInput()
     {
-        float movementX = Input.GetAxis("Horizontal");
-        float movementZ = Input.GetAxis("Vertical");
-        sharkMovementInput = new Vector3(movementX, 0, movementZ);
+        float movementX = 0;
+        float movementZ = 1;
+
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            movementZ = 1;
+        } else if (Input.GetKeyDown(KeyCode.S))
+        {
+            movementZ = -1;
+        }
+
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            movementX = -1;
+        } else if (Input.GetKeyDown(KeyCode.D))
+        {
+            movementX = 1;
+        }
+        else
+        {
+            movementX = 0;
+        }
+
+        sharkMovementInput = new Vector3(movementX, 0, movementZ)*Time.deltaTime*speed;
 
 
         sharkRB.velocity = sharkMovementInput;
