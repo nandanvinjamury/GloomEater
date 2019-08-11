@@ -50,19 +50,19 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.A))
         {
-            rotationY -= 1;
+            rotationY -= 2;
         } else if (Input.GetKey(KeyCode.D))
         {
-            rotationY += 1;
+            rotationY += 2;
         }
 
         if (Input.GetKey(KeyCode.W))
         {
-            rotationX -= 1;
+            rotationX -= 0.5f;
         }
         else if (Input.GetKey(KeyCode.S))
         {
-            rotationX += 1;
+            rotationX += 0.5f;
         }
 
         sharkMovementInputRaw = transform.forward*movementZ;
@@ -79,10 +79,22 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag.Equals("collectible"))
         {
             Destroy(collision.gameObject);
+            if (gloomMeter.fillAmount >= .2f)
+                gloomMeter.fillAmount -= .2f;
+            else
+                gloomMeter.fillAmount = 0f;
+        }
+        if (collision.gameObject.tag.Equals("collectible2")
+        {
+            Destroy(collision.gameObject);
             if (gloomMeter.fillAmount >= .1f)
                 gloomMeter.fillAmount -= .1f;
             else
                 gloomMeter.fillAmount = 0f;
+        }
+        if (collision.gameObject.tag.Equals("enemy"))
+        {
+            gloomMeter.fillAmount = 1f;
         }
     }
 }
