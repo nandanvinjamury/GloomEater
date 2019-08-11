@@ -6,10 +6,10 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour
 {
 
-    public Vector3 sharkMovementInput;
-    public Vector3 sharkMovementInputRaw;
-    public Vector3 sharkRotationInputRaw;
-    public Rigidbody sharkRB;
+    private Vector3 sharkMovementInput;
+    private Vector3 sharkMovementInputRaw;
+    private Vector3 sharkRotationInputRaw;
+    private Rigidbody sharkRB;
     public float speed;
     private float speedFactor = 10;
     private float rotationY = 0;
@@ -50,19 +50,19 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.A))
         {
-            rotationY -= 2;
+            rotationY -= 3;
         } else if (Input.GetKey(KeyCode.D))
         {
-            rotationY += 2;
+            rotationY += 3;
         }
 
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.S))
         {
-            rotationX -= 0.5f;
+            rotationX -= 3f;
         }
-        else if (Input.GetKey(KeyCode.S))
+        else if (Input.GetKey(KeyCode.W))
         {
-            rotationX += 0.5f;
+            rotationX += 3f;
         }
 
         sharkMovementInputRaw = transform.forward*movementZ;
