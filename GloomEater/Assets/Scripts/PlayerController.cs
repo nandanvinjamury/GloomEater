@@ -84,7 +84,7 @@ public class PlayerController : MonoBehaviour
             else
                 gloomMeter.fillAmount = 0f;
         }
-        if (collision.gameObject.tag.Equals("collectible2")
+        if (collision.gameObject.tag.Equals("collectible2"))
         {
             Destroy(collision.gameObject);
             if (gloomMeter.fillAmount >= .1f)
