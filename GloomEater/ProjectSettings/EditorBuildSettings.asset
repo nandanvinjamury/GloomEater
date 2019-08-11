@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Nandan/SharkTest.unity
     guid: 7ca0e979353d32e45add4326ff86b421
+  - enabled: 1
+    path: Assets/Scenes/Death.unity
+    guid: 2fbe1596d27521d4ab7c2a16f5769568
   m_configObjects: {}

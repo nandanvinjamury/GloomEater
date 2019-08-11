@@ -1040,7 +1040,7 @@ GameObject:
   - component: {fileID: 1224225713}
   m_Layer: 0
   m_Name: Capsule
-  m_TagString: Untagged
+  m_TagString: collectible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1325,6 +1325,7 @@ MonoBehaviour:
   sharkRotationInputRaw: {x: 0, y: 0, z: 0}
   sharkRB: {fileID: 0}
   speed: 50
+  gloomMeter: {fileID: 1801457446}
 --- !u!54 &1484726792
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1650,7 +1651,7 @@ GameObject:
   - component: {fileID: 2144093265}
   m_Layer: 0
   m_Name: Cylinder
-  m_TagString: Untagged
+  m_TagString: collectible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

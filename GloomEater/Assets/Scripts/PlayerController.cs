@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class PlayerController : MonoBehaviour
     private float rotationY = 0;
     private float rotationX = 0;
     private float movementZ = 0;
+    public Image gloomMeter;
 
     // Start is called before the first frame update
     void Start()
@@ -70,5 +72,17 @@ public class PlayerController : MonoBehaviour
 
         sharkRB.velocity = sharkMovementInput;
 
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag.Equals("collectible"))
+        {
+            Destroy(collision.gameObject);
+            if (gloomMeter.fillAmount >= .1f)
+                gloomMeter.fillAmount -= .1f;
+            else
+                gloomMeter.fillAmount = 0f;
+        }
     }
 }
