@@ -12,7 +12,7 @@ public class RandomItemGen : MonoBehaviour
     {
         for(int i =0; i< number; i++)
         {
-            Instantiate(gameObject, Random.insideUnitSphere * 5);
+            //Instantiate(gameObject, Random.insideUnitSphere * 5);
         }
     }
 
